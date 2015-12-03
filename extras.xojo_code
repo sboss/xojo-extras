@@ -1,6 +1,24 @@
 #tag Module
 Protected Module extras
 	#tag Method, Flags = &h0
+		Function chomp(extends s as string) As string
+		  
+		  if s.right( 2 ) = chr( 13 ) + chr( 10 )  then 
+		    s = s.Left( s.Len-2 )
+		    s = s.chomp
+		  elseif s.right( 1 ) = chr( 13 ) then 
+		    s = s.Left( s.Len-1 )
+		    s = s.chomp
+		  elseif s.right( 1 ) = chr( 10 ) then 
+		    s = s.Left( s.Len-1 )
+		    s = s.chomp
+		  end if
+		  
+		  return s
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function paddedLeft(extends s as string, width as integer) As string
 		  
 		  if s.len >= width then return s
@@ -29,7 +47,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151202", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151203", Scope = Public
 	#tag EndConstant
 
 
