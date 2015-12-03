@@ -47,7 +47,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151203", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151203a", Scope = Public
 	#tag EndConstant
 
 
