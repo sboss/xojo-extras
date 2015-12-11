@@ -19,6 +19,24 @@ Protected Module extras
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function isEven(extends d as double) As boolean
+		  
+		  if d mod 2 = 0 then return true
+		  
+		  return false
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function isEven(extends i as integer) As boolean
+		  
+		  if i mod 2 = 0 then return true
+		  
+		  return false
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function mid(extends s as string, start as integer, width as integer) As string
 		  if start > s.len then return ""
 		  
@@ -97,7 +115,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151204", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151207", Scope = Public
 	#tag EndConstant
 
 

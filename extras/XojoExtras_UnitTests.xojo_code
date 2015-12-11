@@ -56,6 +56,60 @@ Inherits TestGroup
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Sub isEven01Test()
+		  dim intInput as integer = 5
+		  
+		  
+		  Assert.IsFalse( intInput.isEven )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub isEven02Test()
+		  dim intInput as integer = 4
+		  
+		  
+		  Assert.IsTrue( intInput.isEven )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub isEven03Test()
+		  dim dblInput as double = 5.0
+		  
+		  
+		  Assert.IsFalse( dblInput.isEven )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub isEven04Test()
+		  dim dblInput as double = 4.0
+		  
+		  
+		  Assert.IsTrue( dblInput.isEven )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub isEven05Test()
+		  dim dblInput as double = 5.23
+		  
+		  
+		  Assert.IsFalse( dblInput.isEven )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub isEven06Test()
+		  dim dblInput as double = 4.23
+		  
+		  
+		  Assert.IsTrue( dblInput.isEven )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub mid01Test()
 		  dim strInput as string = "Donec aliquet faucibus nisi, sed"
 		  dim strOutput as string = "faucibus"

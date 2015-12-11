@@ -1,5 +1,7 @@
-# <double>
+# &lt;double&gt;
 
-## <double>.shift
+## &lt;double&gt;.shift
 
-## <double>.plusplus
+## &lt;double&gt;.plusplus
+
+## &lt;double&gt;.isEven

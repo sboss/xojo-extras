@@ -1,5 +1,7 @@
-# <integer>
+# &lt;integer&gt;
 
-## <integer>.shift
+## &lt;integer&gt;.shift
 
-## <integer>.plusplus
+## &lt;integer&gt;.plusplus
+
+## &lt;integer&gt;.isEven
