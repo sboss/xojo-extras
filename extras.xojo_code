@@ -19,6 +19,14 @@ Protected Module extras
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function mid(extends s as string, start as integer, width as integer) As string
+		  if start > s.len then return ""
+		  
+		  return s.right( s.len-start ).left( width )
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function paddedLeft(extends s as string, width as integer) As string
 		  
 		  if s.len >= width then return s
@@ -47,7 +55,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151203a", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151204", Scope = Public
 	#tag EndConstant
 
 

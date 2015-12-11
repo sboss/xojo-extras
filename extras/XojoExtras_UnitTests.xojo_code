@@ -56,6 +56,33 @@ Inherits TestGroup
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Sub mid01Test()
+		  dim strInput as string = "Donec aliquet faucibus nisi, sed"
+		  dim strOutput as string = "faucibus"
+		  
+		  Assert.AreEqual( strOutput,strInput.mid( 14,8 ) )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub mid02Test()
+		  dim strInput as string = "Donec aliquet faucibus nisi, sed"
+		  dim strOutput as string = "faucibus nisi, sed"
+		  
+		  Assert.AreEqual( strOutput,strInput.mid( 14,30 ) )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub mid03Test()
+		  dim strInput as string = "Donec aliquet faucibus nisi, sed"
+		  dim strOutput as string = ""
+		  
+		  Assert.AreEqual( strOutput,strInput.mid( 60,3 ) )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub paddedLeft01Test()
 		  dim strInput as string = "Donec aliquet faucibus nisi, sed"
 		  dim strOutput as string = "     Donec aliquet faucibus nisi, sed"

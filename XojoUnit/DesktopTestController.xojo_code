@@ -7,7 +7,7 @@ Inherits TestController
 		  
 		  Dim group As TestGroup
 		  
-		  group = New XojoExtras_UnitTests(Self, "Xojo Extras Unit Tests")
+		  group = New extras.XojoExtras_UnitTests(Self, "Xojo Extras Unit Tests")
 		  
 		  
 		End Sub
