@@ -5,3 +5,5 @@
 ## &lt;double&gt;.plusplus
 
 ## &lt;double&gt;.isEven
+
+## &lt;double&gt;.average

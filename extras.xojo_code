@@ -1,6 +1,42 @@
 #tag Module
 Protected Module extras
 	#tag Method, Flags = &h0
+		Function average(extends d() as double) As double
+		  if d = NIL then return 0
+		  
+		  dim dblTemp as double
+		  dim intCounter as integer =0 
+		  for each number as double in d
+		    dblTemp = dblTemp + number
+		    intCounter= intCounter+1
+		    
+		  next
+		  
+		  if intCounter = 0 then return 0
+		  
+		  return ( dblTemp / intCounter )
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function average(extends i() as integer) As double
+		  if i = NIL then return 0
+		  
+		  dim intTemp as integer
+		  dim intCounter as integer =0 
+		  for each number as integer in i
+		    intTemp = intTemp + number
+		    intCounter= intCounter+1
+		    
+		  next
+		  
+		  if intCounter = 0 then return 0
+		  
+		  return ( intTemp / intCounter )
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function chomp(extends s as string) As string
 		  
 		  if s.right( 2 ) = chr( 13 ) + chr( 10 )  then 
@@ -115,7 +151,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151207", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151209", Scope = Public
 	#tag EndConstant
 
 

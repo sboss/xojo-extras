@@ -2,6 +2,60 @@
 Protected Class XojoExtras_UnitTests
 Inherits TestGroup
 	#tag Method, Flags = &h0
+		Sub average01Test()
+		  dim intInput() as integer = array( 5,6,7 )
+		  dim dblOutput as double = 6
+		  
+		  Assert.AreEqual( dblOutput,intInput.average )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub average02Test()
+		  dim dblInput() as double = array( 5.0,6.0,7.0 )
+		  dim dblOutput as double = 6.0
+		  
+		  Assert.AreEqual( dblOutput,dblInput.average )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub average03Test()
+		  dim intInput() as integer = array( 6 )
+		  dim dblOutput as double = 6
+		  
+		  Assert.AreEqual( dblOutput,intInput.average )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub average04Test()
+		  dim dblInput() as double = array( 6.0 )
+		  dim dblOutput as double = 6.0
+		  
+		  Assert.AreEqual( dblOutput,dblInput.average )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub average05Test()
+		  dim intInput() as integer
+		  dim dblOutput as double = 0
+		  
+		  Assert.AreEqual( dblOutput,intInput.average )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub average06Test()
+		  dim dblInput() as double
+		  dim dblOutput as double = 0
+		  
+		  Assert.AreEqual( dblOutput,dblInput.average )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub chomp01Test()
 		  dim strInput as string = "Donec aliquet faucibus nisi, sed" + EndOfLine.Windows
 		  dim strOutput as string = "Donec aliquet faucibus nisi, sed"
