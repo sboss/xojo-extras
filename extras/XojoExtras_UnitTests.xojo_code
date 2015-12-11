@@ -100,6 +100,33 @@ Inherits TestGroup
 		End Sub
 	#tag EndMethod
 
+	#tag Method, Flags = &h0
+		Sub shift01Test()
+		  dim strInput() as string = array( "Donec","aliquet","faucibus","nisi","sed" )
+		  dim strOutput as string = "Donec"
+		  
+		  Assert.AreEqual( strOutput,strInput.shift )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub shift02Test()
+		  dim intInput() as integer = array( 1,2,3,4,5,6 )
+		  dim intOutput as integer = 1
+		  
+		  Assert.AreEqual( intOutput,intInput.shift )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub shift03Test()
+		  dim dblInput() as double = array( 1.1,2.2,3.3,4.4,5.5,6.0 )
+		  dim dblOutput as double = 1.1
+		  
+		  Assert.AreEqual( dblOutput,dblInput.shift )
+		End Sub
+	#tag EndMethod
+
 
 	#tag ViewBehavior
 		#tag ViewProperty

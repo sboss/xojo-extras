@@ -54,6 +54,36 @@ Protected Module extras
 		End Function
 	#tag EndMethod
 
+	#tag Method, Flags = &h0
+		Function shift(extends d() as double) As double
+		  if d.Ubound > 0 then
+		    dim dblRetVal as double = d( 0 )
+		    d.Remove( 0 )
+		    return dblRetVal
+		  end
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function shift(extends i() as integer) As integer
+		  if i.Ubound > 0 then
+		    dim intRetVal as integer = i( 0 )
+		    i.Remove( 0 )
+		    return intRetVal
+		  end
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function shift(extends s() as string) As string
+		  if s.Ubound > 0 then
+		    dim strRetVal as string = s( 0 )
+		    s.Remove( 0 )
+		    return strRetVal
+		  end
+		End Function
+	#tag EndMethod
+
 
 	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151204", Scope = Public
 	#tag EndConstant

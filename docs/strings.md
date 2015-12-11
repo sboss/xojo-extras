@@ -13,3 +13,5 @@ this method pads the string to the left side with spaces to be the width of `wid
 ## <string>.paddedRight( width )
 
 this method pads the string to the right side with spaces to be the width of `width`.  `<string>.paddedRight( width )` where width is an integer.
+
+## <string>.shift
