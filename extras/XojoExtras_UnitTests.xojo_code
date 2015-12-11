@@ -101,6 +101,24 @@ Inherits TestGroup
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Sub plusplus01Test()
+		  dim intInput as integer = 5
+		  dim intOutput as integer = 6
+		  
+		  Assert.AreEqual( intOutput,intInput.plusplus )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub plusplus02Test()
+		  dim dblInput as double = 5.0
+		  dim dblOutput as double = 6.0
+		  
+		  Assert.AreEqual( dblOutput,dblInput.plusplus )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub shift01Test()
 		  dim strInput() as string = array( "Donec","aliquet","faucibus","nisi","sed" )
 		  dim strOutput as string = "Donec"

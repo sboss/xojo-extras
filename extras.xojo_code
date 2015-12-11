@@ -55,6 +55,18 @@ Protected Module extras
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function plusplus(extends d as double) As double
+		  return d + 1
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function plusplus(extends i as integer) As integer
+		  return i + 1
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function shift(extends d() as double) As double
 		  if d.Ubound > 0 then
 		    dim dblRetVal as double = d( 0 )
