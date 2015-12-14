@@ -81,6 +81,18 @@ Protected Module extras
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function minusminus(extends d as double) As double
+		  return d - 1
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function minusminus(extends i as integer) As integer
+		  return i - 1
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function paddedLeft(extends s as string, width as integer) As string
 		  
 		  if s.len >= width then return s
@@ -203,7 +215,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151210", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151211", Scope = Public
 	#tag EndConstant
 
 

@@ -191,6 +191,24 @@ Inherits TestGroup
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Sub minusminus01Test()
+		  dim intInput as integer = 5
+		  dim intOutput as integer = 4
+		  
+		  Assert.AreEqual( intOutput,intInput.minusminus )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub minusminus02Test()
+		  dim dblInput as double = 5.0
+		  dim dblOutput as double = 4.0
+		  
+		  Assert.AreEqual( dblOutput,dblInput.minusminus )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub paddedLeft01Test()
 		  dim strInput as string = "Donec aliquet faucibus nisi, sed"
 		  dim strOutput as string = "     Donec aliquet faucibus nisi, sed"

@@ -9,3 +9,5 @@
 ## &lt;double&gt;.average
 
 ## &lt;double&gt;.push
+
+## &lt;double&gt;.minusminus

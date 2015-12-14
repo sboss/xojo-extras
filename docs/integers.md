@@ -9,3 +9,5 @@
 ## &lt;integer&gt;.average
 
 ## &lt;integer&gt;.push
+
+## &lt;integer&gt;.minusminus
