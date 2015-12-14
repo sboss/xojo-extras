@@ -227,6 +227,15 @@ Inherits TestGroup
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Sub push01Test()
+		  dim intInput() as integer = array( 1,2,3 )
+		  dim intOutput() as integer = array( 1,2,3,4 )
+		  
+		  Assert.AreEqual( intOutput, intInput.push( 4 ) )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub shift01Test()
 		  dim strInput() as string = array( "Donec","aliquet","faucibus","nisi","sed" )
 		  dim strOutput as string = "Donec"

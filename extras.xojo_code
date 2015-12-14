@@ -121,6 +121,58 @@ Protected Module extras
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function push(extends d() as double, numbers() as double) As double()
+		  for each number as double in numbers
+		    d.Append number
+		  next
+		  return d
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function push(extends d() as double, number as double) As double()
+		  d.append number
+		  
+		  return d
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function push(extends i() as integer, numbers() as integer) As integer()
+		  for each number as integer in numbers
+		    i.Append number
+		  next
+		  
+		  return i
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function push(extends i() as integer, number as integer) As integer()
+		  i.append number
+		  return i
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function push(extends s() as string, items() as string) As string()
+		  for each item as string in items
+		    s.Append item
+		  next
+		  
+		  return s
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function push(extends s() as string, item as string) As string()
+		  s.append item
+		  return s
+		  
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function shift(extends d() as double) As double
 		  if d.Ubound > 0 then
 		    dim dblRetVal as double = d( 0 )
@@ -151,7 +203,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151209", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151210", Scope = Public
 	#tag EndConstant
 
 

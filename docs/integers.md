@@ -7,3 +7,5 @@
 ## &lt;integer&gt;.isEven
 
 ## &lt;integer&gt;.average
+
+## &lt;integer&gt;.push
