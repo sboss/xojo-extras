@@ -110,6 +110,33 @@ Inherits TestGroup
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Sub deTAB01Test()
+		  dim strInput as string = "Donec aliquet" + chr( 9 ) + "faucibus nisi, sed"
+		  dim strOutput as string = "Donec aliquet    faucibus nisi, sed"
+		  
+		  Assert.AreEqual( strOutput,strInput.deTAB )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub deTAB02Test()
+		  dim strInput as string = "Donec aliquet" + chr( 9 ) + "faucibus nisi, sed"
+		  dim strOutput as string = "Donec aliquet faucibus nisi, sed"
+		  
+		  Assert.AreEqual( strOutput,strInput.deTAB(1) )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub deTAB03Test()
+		  dim strInput as string = "Donec aliquet" + chr( 9 ) + "faucibus nisi, sed"
+		  dim strOutput as string = "Donec aliquet        faucibus nisi, sed"
+		  
+		  Assert.AreEqual( strOutput,strInput.deTAB(8) )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub isEven01Test()
 		  dim intInput as integer = 5
 		  

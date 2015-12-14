@@ -55,6 +55,20 @@ Protected Module extras
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function deTAB(extends s as string, numberOfSpaces as integer = 4) As string
+		  dim strReplacement as string
+		  dim intCounter as integer = 0
+		  while intCounter < numberOfSpaces
+		    strReplacement = strReplacement + chr( 32 )
+		    intCounter=intCounter+1
+		    
+		  wend
+		  
+		  return s.ReplaceAllB( chr( 9 ), strReplacement )
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function isEven(extends d as double) As boolean
 		  
 		  if d mod 2 = 0 then return true
@@ -215,7 +229,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151211", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151212", Scope = Public
 	#tag EndConstant
 
 
