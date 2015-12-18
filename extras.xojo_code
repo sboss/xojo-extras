@@ -135,6 +135,99 @@ Protected Module extras
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function phoneticAlphabetNATO(extends s as string) As string
+		  dim strRetVal as string = ""
+		  dim strTemp as string = s
+		  
+		  while strTemp.len > 0 
+		    dim c as string = strTemp.Left( 1 )
+		    select case c.Lowercase
+		    case "a"
+		      strRetVal = strRetVal + "Alfa "
+		    case "b"
+		      strRetVal = strRetVal + "Bravo "
+		    case "c"
+		      strRetVal = strRetVal + "Charlie "
+		    case "d"
+		      strRetVal = strRetVal + "Delta "
+		    case "e"
+		      strRetVal = strRetVal + "Echo "
+		    case "f"
+		      strRetVal = strRetVal + "Foxtrot "
+		    case "g"
+		      strRetVal = strRetVal + "Golf "
+		    case "h"
+		      strRetVal = strRetVal + "Hotel "
+		    case "i"
+		      strRetVal = strRetVal + "India "
+		    case "j"
+		      strRetVal = strRetVal + "Juliett "
+		    case "k"
+		      strRetVal = strRetVal + "Kilo "
+		    case "l"
+		      strRetVal = strRetVal + "Lima "
+		    case "m"
+		      strRetVal = strRetVal + "Mike "
+		    case "n"
+		      strRetVal = strRetVal + "November "
+		    case "o"
+		      strRetVal = strRetVal + "Oscar "
+		    case "p"
+		      strRetVal = strRetVal + "Papa "
+		    case "q"
+		      strRetVal = strRetVal + "Quebec "
+		    case "r"
+		      strRetVal = strRetVal + "Romeo "
+		    case "s"
+		      strRetVal = strRetVal + "Sierra "
+		    case "t"
+		      strRetVal = strRetVal + "Tango "
+		    case "u"
+		      strRetVal = strRetVal + "Uniform "
+		    case "v"
+		      strRetVal = strRetVal + "Victor "
+		    case "w"
+		      strRetVal = strRetVal + "Whiskey "
+		    case "x"
+		      strRetVal = strRetVal + "Xray "
+		    case "y"
+		      strRetVal = strRetVal + "Yankee "
+		    case "z"
+		      strRetVal = strRetVal + "Zulu "
+		      
+		    case "1"
+		      strRetVal = strRetVal + "One "
+		    case "2"
+		      strRetVal = strRetVal + "Two "
+		    case "3"
+		      strRetVal = strRetVal + "Three "
+		    case "4"
+		      strRetVal = strRetVal + "Four "
+		    case "5"
+		      strRetVal = strRetVal + "Five "
+		    case "6"
+		      strRetVal = strRetVal + "Six "
+		    case "7"
+		      strRetVal = strRetVal + "Seven "
+		    case "8"
+		      strRetVal = strRetVal + "Eight "
+		    case "9"
+		      strRetVal = strRetVal + "Nine "
+		    case "0"
+		      strRetVal = strRetVal + "Zero "
+		      
+		    else
+		      strRetVal = strRetVal + c
+		    end select
+		    
+		    strTemp = strTemp.Right( strTemp.len-1 )
+		  wend
+		  
+		  return strRetVal.Trim
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function plusplus(extends d as double) As double
 		  return d + 1
 		End Function

@@ -17,3 +17,7 @@ this method pads the string to the right side with spaces to be the width of `wi
 ## &lt;string&gt;.shift
 
 ## &lt;string&gt;.push
+
+## &lt;string&gt;.deTAB( numberOfSpaces )
+
+## &lt;string&gt;.phoneticAlphabetNATO
