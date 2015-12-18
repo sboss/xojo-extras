@@ -107,6 +107,99 @@ Protected Module extras
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function morseCode(extends s as string) As string
+		  dim strRetVal as string = ""
+		  dim strTemp as string = s
+		  
+		  while strTemp.len > 0 
+		    dim c as string = strTemp.Left( 1 )
+		    select case c.Lowercase
+		    case "a"
+		      strRetVal = strRetVal + ".- "
+		    case "b"
+		      strRetVal = strRetVal + "-... "
+		    case "c"
+		      strRetVal = strRetVal + "-.-. "
+		    case "d"
+		      strRetVal = strRetVal + "-.. "
+		    case "e"
+		      strRetVal = strRetVal + ". "
+		    case "f"
+		      strRetVal = strRetVal + "..-. "
+		    case "g"
+		      strRetVal = strRetVal + "--. "
+		    case "h"
+		      strRetVal = strRetVal + ".... "
+		    case "i"
+		      strRetVal = strRetVal + ".. "
+		    case "j"
+		      strRetVal = strRetVal + ".--- "
+		    case "k"
+		      strRetVal = strRetVal + "-.- "
+		    case "l"
+		      strRetVal = strRetVal + ".-.. "
+		    case "m"
+		      strRetVal = strRetVal + "-- "
+		    case "n"
+		      strRetVal = strRetVal + "-. "
+		    case "o"
+		      strRetVal = strRetVal + "--- "
+		    case "p"
+		      strRetVal = strRetVal + ".--. "
+		    case "q"
+		      strRetVal = strRetVal + "--.- "
+		    case "r"
+		      strRetVal = strRetVal + ".-. "
+		    case "s"
+		      strRetVal = strRetVal + "... "
+		    case "t"
+		      strRetVal = strRetVal + "- "
+		    case "u"
+		      strRetVal = strRetVal + "..- "
+		    case "v"
+		      strRetVal = strRetVal + "...- "
+		    case "w"
+		      strRetVal = strRetVal + ".-- "
+		    case "x"
+		      strRetVal = strRetVal + "-..- "
+		    case "y"
+		      strRetVal = strRetVal + "-.-- "
+		    case "z"
+		      strRetVal = strRetVal + "--.. "
+		      
+		    case "1"
+		      strRetVal = strRetVal + ".---- "
+		    case "2"
+		      strRetVal = strRetVal + "..--- "
+		    case "3"
+		      strRetVal = strRetVal + "...-- "
+		    case "4"
+		      strRetVal = strRetVal + "....- "
+		    case "5"
+		      strRetVal = strRetVal + "..... "
+		    case "6"
+		      strRetVal = strRetVal + "-.... "
+		    case "7"
+		      strRetVal = strRetVal + "--... "
+		    case "8"
+		      strRetVal = strRetVal + "---.. "
+		    case "9"
+		      strRetVal = strRetVal + "----. "
+		    case "0"
+		      strRetVal = strRetVal + "----- "
+		      
+		    else
+		      strRetVal = strRetVal + c
+		    end select
+		    
+		    strTemp = strTemp.Right( strTemp.len-1 )
+		  wend
+		  
+		  return strRetVal.Trim
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function paddedLeft(extends s as string, width as integer) As string
 		  
 		  if s.len >= width then return s
@@ -322,7 +415,7 @@ Protected Module extras
 	#tag EndMethod
 
 
-	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151212", Scope = Public
+	#tag Constant, Name = kVersion, Type = String, Dynamic = False, Default = \"20151214", Scope = Public
 	#tag EndConstant
 
 
